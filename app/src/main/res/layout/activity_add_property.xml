@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddPropertyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".1"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/bg_header"
+        android:backgroundTint="@color/blue">
+
+        <ImageButton
+            android:id="@+id/btn_back_add_property"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            android:onClick="btnBackAddProperty_Click"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/lb_p_title_add_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Publicar una propiedad"
+            android:textColor="@color/sky_blue_3"
+            android:textSize="18dp"
+            android:layout_marginLeft="10sp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".9"
+        android:layout_marginTop="10sp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10dp">
+
+            <TextView
+                android:id="@+id/lb_title_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_title_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: Se vende una casa"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_description_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_description_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:verticalScrollbarPosition="defaultPosition"
+                android:gravity="start"
+                android:inputType="textMultiLine"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: La casa cuenta con..."
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_address_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dirección"
+                android:textSize="18sp"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/txt_address_add_property"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="10dp"
+                    android:hint="ej: Jr. abc 123"
+                    android:inputType="text"
+                    android:paddingHorizontal="10dp"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/imageButton"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/imageButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_rounded"
+                    android:backgroundTint="@color/blue"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/txt_address_add_property"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:onClick="btnOpenMap_Click"
+                    app:srcCompat="@drawable/ic_location" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/lb_city_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ciudad"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_city_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="text"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: Cajamarca"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_lat_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Latitud"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_lat_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal|numberSigned"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: -7.5796675"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_lon_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Longitud"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_lon_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal|numberSigned"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: 7.568457"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_price_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Precio referencial"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:id="@+id/txt_price_add_property"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:inputType="numberDecimal"
+                android:paddingHorizontal="10dp"
+                android:hint="ej: S/. 58,000.00"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"/>
+
+            <Button
+                android:id="@+id/btn_images_add_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar imagenes"
+                android:backgroundTint="@color/sky_blue_1"
+                android:textColor="@color/dark_blue"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"
+                android:onClick="btnImagesAddProperty_Click"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10sp"/>
+
+
+            <Button
+                android:id="@+id/btn_publish_add_property"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Publicar"
+                android:layout_gravity="center"
+                android:textColor="@color/sky_blue_3"
+                android:textSize="18sp"
+                android:layout_marginBottom="10sp"
+                android:onClick="btnPublishAddProperty"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

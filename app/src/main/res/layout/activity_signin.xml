@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SigninActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UselessLeaf">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15sp"
+            android:layout_marginRight="15sp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/bg_rounded"
+            android:backgroundTint="@color/sky_blue_3"
+            android:elevation="15sp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingHorizontal="10dp"
+                android:paddingVertical="10sp"
+                tools:ignore="ExtraText,UselessParent">
+
+                <TextView
+                    android:id="@+id/lb_title_signin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrarse"
+                    android:textColor="@color/blue"
+                    android:textSize="14pt"
+                    android:textStyle="bold"
+                    android:textAlignment="center"
+                    tools:ignore="HardcodedText" />
+
+                <TextView
+                    android:id="@+id/lb_signin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Nombres"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/lb_signin_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Apelldos"
+                    android:textSize="16dp"
+                    android:layout_marginTop="25sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_lastname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="16dp"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/lb_signin_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Celular"
+                    android:textSize="16dp"
+                    android:layout_marginTop="25sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:textSize="16dp"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                }<TextView
+                android:id="@+id/lb_signin_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Correo"
+                android:textSize="16dp"
+                android:layout_marginTop="25sp"
+                tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:textSize="16dp"
+                    android:minHeight="48dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/lb_signin_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Contraseña"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textSize="16dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/lb_signin_r_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Confirmar contraseña"
+                    android:textSize="16dp"
+                    android:layout_marginTop="15sp"
+                    tools:ignore="HardcodedText" />
+
+                <EditText
+                    android:id="@+id/txt_signin_r_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textSize="16dp"
+                    tools:ignore="Autofill,LabelFor,SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <CheckBox
+                    android:id="@+id/cbx_signin_tyc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aceptar Terminos y Condiciones"
+                    android:layout_gravity="start"
+                    android:layout_marginTop="5sp"
+                    android:textSize="16dp"
+                    tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+                <Button
+                    android:id="@+id/btn_login_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:minHeight="48dp"
+                    android:text="Registrarse"
+                    android:textColor="@color/white"
+                    android:onClick="btnSignIn_Click"
+                    tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginTop="15sp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/lb_login_question"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="¿Ya tienes cuenta?"
+                        android:textSize="16dp"
+                        tools:ignore="HardcodedText,SpUsage,TextSizeCheck" />
+
+                    <TextView
+                        android:id="@+id/lb_login_signin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5sp"
+                        android:onClick="btnRedirctLogIn_Click"
+                        android:text="Ingrese aqui"
+                        android:textColor="@color/blue"
+                        android:textSize="16dp"
+                        tools:ignore="HardcodedText,TouchTargetSizeCheck,TouchTargetSizeCheck" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

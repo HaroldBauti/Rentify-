@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailPropertyActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight=".1"
+        android:orientation="horizontal"
+        android:paddingHorizontal="10sp"
+        android:background="@drawable/bg_header"
+        android:backgroundTint="@color/blue">
+
+        <ImageButton
+            android:id="@+id/btn_back_detail_property"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/lb_p_title_detail_property"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="btnBackDetailProduct_Click"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/lb_p_title_detail_property"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:text="Detalle de propiedad"
+            android:textColor="@color/sky_blue_3"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_favorite_detail_property"
+            app:layout_constraintStart_toEndOf="@+id/btn_back_detail_property"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/btn_favorite_detail_property"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:background="@null"
+            android:src="@drawable/ic_favorite_outline"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_location_detail_property"
+            app:layout_constraintStart_toEndOf="@+id/lb_p_title_detail_property"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="btnFavoriteDetailProduct_Click"
+            android:tint="@color/sky_blue_3"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck,UseAppTint" />
+
+        <ImageButton
+            android:id="@+id/btn_location_detail_property"
+            android:layout_width="48dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:background="@null"
+            android:src="@drawable/ic_location"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btn_favorite_detail_property"
+            app:layout_constraintTop_toTopOf="parent"
+            android:onClick="btnLocationDetailProduct_Click"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_marginTop="10sp"
+        android:layout_weight=".9"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="10sp">
+
+            <ImageView
+                android:id="@+id/img_detail_property"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:background="@color/sky_blue_2"
+                android:src="@drawable/ic_no_image"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_title_detail_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10sp"
+                android:inputType="textMultiLine"
+                android:minHeight="48dp"
+                android:text="Casa en venta"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/lb_location_detail_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_location"
+                android:drawableTint="@color/blue"
+                android:text="Jr. abc 123 - Cajamarca"
+                android:textSize="16sp"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_price_detail_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="S/. 50,000.00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10sp"/>
+
+            <TextView
+                android:id="@+id/lb_description_detail_property"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Se vende casa de dos pisos, cuenta con tres habitaciones, cocina, sala amplia, garage, y zona de lavanderia."
+                android:textSize="16sp"
+                android:layout_marginBottom="30sp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Whatsapp"
+                android:backgroundTint="@color/blue"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:layout_gravity="center|bottom"
+                android:onClick="btnWhatsappDetailProduct_Click"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
